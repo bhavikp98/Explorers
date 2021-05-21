@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Explorers</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+	header{
+		background: #4481eb;
+	}	
+</style>
+
+<body>
+<header>
+		<a href="index.html" class="brand">Expl<span><i class="fa fa-globe"></i></span>rers</a>
+		<div class="menubtn"></div>
+        <div class="navigation">
+        	<div class="navigation-items">
+        	   <a href="#">Home</a>
+        	   <a href="">About</a>
+        	   <a href="explore.html">Explore</a>
+        	   <a href="">Gallery</a>
+        	   <a href="">Contact</a>
+        	</div>
+        </div>
+</header>
+
+
+
+<script type="text/javascript">
+	const menuBtn = document.querySelector(".menubtn");
+	const navigation = document.querySelector(".navigation");
+
+
+	menuBtn.addEventListener("click" , () =>{
+		menuBtn.classList.toggle("active");
+		navigation.classList.toggle("active");
+	});
+</script>
+</body>
+</html>

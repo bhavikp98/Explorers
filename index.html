@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Explorers</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<a href="index.html" class="brand">Expl<span><i class="fa fa-globe"></i></span>rers</a>
+		<div class="menubtn"></div>
+        <div class="navigation">
+        	<div class="navigation-items">
+        	   <a href="#">Home</a>
+        	   <a href="">About</a>
+        	   <a href="explore.html">Explore</a>
+        	   <a href="">Gallery</a>
+        	   <a href="">Contact</a>
+        	   <a href="login.html" class="login"><i class="fa fa-user-circle"></i>login</a>
+        	</div>
+        </div>
+	</header>
+
+	<section class="home">
+		<img src="img/1.jpg" class="image-slide active">
+		<img src="img/2.jpg" class="image-slide">
+		<img src="img/3.jpg" class="image-slide">
+		<img src="img/4.jpg" class="image-slide">
+		<img src="img/5.jpg" class="image-slide">
+		<div class="content active">
+			<h1>Wonderful.<br><span>Island</span></h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident praesentium minima eligendi, aut incidunt debitis non eos. Nesciunt tempore dolores nostrum optio reprehenderit, nobis ut perspiciatis natus ducimus quos esse!</p>
+			<a href="">Explore</a>
+		</div>
+
+		<div class="content">
+			<h1>Camping.<br><span>Enjoy</span></h1>
+			<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Nulla provident repellat ratione temporibus ullam repudiandae sunt laboriosam distinctio architecto dolores molestiae, consequatur, aspernatur similique iste quam consectetur facilis hic reprehenderit?</p>
+			<a href="">Explore</a>
+		</div>
+
+		<div class="content">
+			<h1>Experience.<br><span>Adventure</span></h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id amet ut accusamus. Explicabo corrupti consectetur quae, vitae sint ducimus debitis. Quia impedit quibusdam eos vel, provident nemo illo labore tempora.</p>
+			<a href="">Explore</a>
+		</div>
+
+		<div class="content">
+			<h1>Roadtrip.<br><span>together</span></h1>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas totam molestias dignissimos! Aut officiis animi ipsam dolore, voluptatem excepturi pariatur iusto laudantium, delectus quibusdam dolorum vel. Vitae suscipit quia aliquid?</p>
+			<a href="">Explore</a>
+		</div>
+
+		<div class="content">
+			<h1>feelnature.<br><span>Realx</span></h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Cum nisi autem consequatur blanditiis laudantium rem, natus perferendis dolorum nostrum ex quibusdam labore, libero similique, illum. Voluptatem sit odio laudantium et!</p>
+			<a href="">Expl<span><i class="fa fa-search"></i></span>re</a>
+		</div>
+
+		<div class="social-icon">
+			<a href=""><i class="fa fa-facebook"></i></a>
+			<a href=""><i class="fa fa-twitter"></i></a>
+			<a href=""><i class="fa fa-instagram"></i></a>
+		</div>
+
+		<div class="sildernav">
+			<div class="slidebtn active"></div>
+			<div class="slidebtn"></div>
+			<div class="slidebtn"></div>
+			<div class="slidebtn"></div>
+			<div class="slidebtn"></div>
+		</div>
+	</section>
+
+<!-- Script for toggle -->
+
+<script type="text/javascript">
+	const menuBtn = document.querySelector(".menubtn");
+	const navigation = document.querySelector(".navigation");
+
+
+	menuBtn.addEventListener("click" , () =>{
+		menuBtn.classList.toggle("active");
+		navigation.classList.toggle("active");
+	});
+
+
+// Script for image slider
+
+const btn = document.querySelectorAll(".slidebtn");
+const slides =document.querySelectorAll(".image-slide");
+const contents =document.querySelectorAll(".content");
+
+
+var sliderNav = function(manual){
+	btn.forEach((btn) =>{
+		btn.classList.remove("active");
+	});
+	
+	slides.forEach((slide) =>{
+		slide.classList.remove("active");
+	});
+
+
+	contents.forEach((content) =>{
+		content.classList.remove("active");
+	});
+
+	btn[manual].classList.add("active");
+	slides[manual].classList.add("active");
+	contents[manual].classList.add("active");		
+}
+
+btn.forEach((btn , i) =>{
+
+	btn.addEventListener("click" , () =>{
+		sliderNav(i);
+	});
+
+});
+
+
+// Script for slide show buttons;
+
+
+</script>
+																											
+</body>
+</html>

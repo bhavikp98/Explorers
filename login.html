@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Explorers</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+	header{
+		background: #4481eb;
+	}	
+</style>
+
+<body>
+<header>
+		<a href="index.html" class="brand">Expl<span><i class="fa fa-globe"></i></span>rers</a>
+		<div class="menubtn"></div>
+        <div class="navigation">
+        	<div class="navigation-items">
+        	   <a href="#">Home</a>
+        	   <a href="">About</a>
+        	   <a href="explore.html">Explore</a>
+        	   <a href="">Gallery</a>
+        	   <a href="">Contact</a>
+        	</div>
+        </div>
+</header>
+
+<section class="account">
+	<div class="container">
+	<div class="form-container">
+		<div class="signin-signup">
+			<form action="" class="sign-in-form">
+				<h2 class="form-title">sign in</h2>
+				<div class="input-field">
+					<i class="fa fa-user"></i>
+					<input type="text" placeholder="Enter Username">
+				</div>
+
+				<div class="input-field">
+					<i class="fa fa-lock"></i>
+					<input type="password" placeholder="Enter Password">
+				</div>
+				<input type="submit" value="Login" class="btn solid">
+				<p class="social-text">or sign in with</p>
+				<div class="social-media">
+					<a href="" class="social-btn"><i class="fa fa-facebook"></i></a>
+					<a href="" class="social-btn"><i class="fa fa-instagram"></i></a>
+					<a href="" class="social-btn"><i class="fa fa-google"></i></a>
+					<a href="" class="social-btn"><i class="fa fa-twitter"></i></a>
+				</div>
+			</form>
+
+			<form action="" class="sign-up-form">
+				<h2 class="form-title">sign up</h2>
+				<div class="input-field">
+					<i class="fa fa-user"></i>
+					<input type="text" placeholder="Enter Username">
+				</div>
+
+				<div class="input-field">
+					<i class="fa fa-envelope"></i>
+					<input type="text" placeholder="Enter Email">
+				</div>
+
+				<div class="input-field">
+					<i class="fa fa-lock"></i>
+					<input type="password" placeholder="Enter Password">
+				</div>
+				<input type="submit" value="sign up" class="btn solid">
+				<p class="social-text">or sign up with</p>
+				<div class="social-media">
+					<a href="" class="social-btn"><i class="fa fa-facebook"></i></a>
+					<a href="" class="social-btn"><i class="fa fa-instagram"></i></a>
+					<a href="" class="social-btn"><i class="fa fa-google"></i></a>
+					<a href="" class="social-btn"><i class="fa fa-twitter"></i></a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="panel-container">
+		<div class="panel left-panel">
+			<div class="panel-content">
+				<h3>new here ?</h3>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At error, cupiditate sequi!</p>
+				<button class="btn transparent" id="sign-up-btn">sign up</button>
+			</div>
+			<img src="img/log1.svg" class="panel-image">
+		</div>
+
+		<div class="panel right-panel">
+			<div class="panel-content">
+				<h3>one of us?</h3>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At error, cupiditate sequi!</p>
+				<button class="btn transparent" id="sign-in-btn">sign in</button>
+			</div>
+			<img src="img/log2.svg" class="panel-image" height="">
+		</div>
+	</div>
+</div>
+</section>
+<script type="text/javascript">
+	const menuBtn = document.querySelector(".menubtn");
+	const navigation = document.querySelector(".navigation");
+
+
+	menuBtn.addEventListener("click" , () =>{
+		menuBtn.classList.toggle("active");
+		navigation.classList.toggle("active");
+	});
+</script>
+<script src="login.js"></script>
+</body>
+</html>
